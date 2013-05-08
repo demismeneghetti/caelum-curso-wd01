@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<html>
+<body id="corpo">
+<form id="meuForm">
+	Chute um número entre 0 e 9.
+	<br>
+	<br>
+	<input type="text" id="chutado"/>
+	<input type="submit" value="Jogar"/>
+</form>
+
+<script>
+
+var mostra = function(frase){
+    document.write(frase);
+}
+
+var pulaLinha = function(){
+    document.write("<br>");
+}
+
+function joga(){
+	var entreZeroEUm = Math.random();
+	var entreZeroEDez = entreZeroEUm * 10;
+	var secreto = Math.round(entreZeroEDez);
+
+	var campoTexto = document.getElementById("chutado");
+	var chute = parseInt(campoTexto.value);
+
+	var body = document.getElementById("corpo");
+	if(chute == secreto){
+		body.bgColor="green"; 
+	} else {
+		body.bgColor="red"; 
+	}
+	return false;
+}
+
+var formulario = document.getElementById("meuForm");
+formulario.onsubmit = joga;
+
+</script>
+</body>
+</html>

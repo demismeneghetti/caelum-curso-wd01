@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<html>
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+    }
+
+    function mostra(par1){
+        document.write(par1);
+        pulaLinha();
+    }
+
+        var nome = ("Demis");
+        var idade = ("32");
+        var peso = (87);
+        var altura = (1,82);
+
+        mostra("Nome: " + nome);
+        mostra("Idade: " + idade);
+
+
+        var imc = peso / (altura * altura);
+
+        mostra("IMC: " + Math.round(imc));
+
+        console.log("Peso: " + peso);
+        console.log("Altura: " + altura);
+
+</script>
+</html>

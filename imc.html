@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<html>
+<script>
+
+var pulaLinha = function(){
+    document.write("<br>");
+}
+
+var mostra = function(frase){
+    document.write(frase);
+}
+
+var calculaIMC = function(peso, altura, altura){
+    var imc = peso / (altura * altura);
+    return imc;
+}
+
+function imprimeFicha(){
+    document.write("Nome: " + nome);
+    pulaLinha();
+    document.write("Idade: " + idade);
+    pulaLinha();
+    document.write("Peso: " + peso);
+    pulaLinha();
+    document.write("Altura: " + altura);
+    pulaLinha();
+    document.write("IMC: " + Math.round(imc));
+}
+
+var nome = prompt("Por favor, informe o seu nome!");
+var idadeDigitada = prompt("Me informe a sua idade!")
+var idade = parseInt (idadeDigitada);
+var pesoDigitado = prompt("Agora me informe seu peso!");
+var peso = parseInt (pesoDigitado);
+var altura = prompt("Só resta uma informação, a sua altura!");
+var imc = calculaIMC(altura, peso);
+
+imprimeFicha();
+pulaLinha();
+mostra("O seu IMC é: " + imc);
+pulaLinha();
+mostra("Você está " + (imc - 18.5) + " pontos acima do limite de magreza.");
+
+</script>
+</html>
