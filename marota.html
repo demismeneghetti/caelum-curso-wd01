@@ -1,35 +1,35 @@
 <meta charset="UTF-8">
 <html>
 	<h1>Calcule o seu IMC</h1>
-<fomr>
-	Altura: <input type="text" id="campoAltura"/>
-	<br>
-	Peso: <input type="text" id="campoPeso"/>
-	<br>
-	<input type="submit" value="calcula" id="botao"/>
+	<fomr>
+		Altura: <input type="text" id="campoAltura"/>
+		<br>
+		Peso: <input type="text" id="campoPeso"/>
+		<br>
+		<input type="submit" value="calcula" id="botao"/>
 
 
-	<script>
-		var calculaIMC = function(){
-		    var peso = parseInt (pesoDigitado);
-		    var altura = parseInt (alturaDigitada);
-		    var imc = peso / (altura * altura);
-		    return imc;
-		}
+		<script>
+			var calculaIMC = function(){
+			    var peso = parseInt (pesoDigitado);
+			    var altura = parseInt (alturaDigitada);
+			    var imc = peso / (altura * altura);
+			    return imc;
+			}
 
-		var imprimeIMC = function(){
-			var caixinhaAltura = document.getElementById("campoAltura");
-			var caixinhaPeso = document.getElementById("campoPeso");
-			
-			var alturaPessoa = caixinhaAltura.value;
-			var pesoPessoa = caixinhaPeso.value;
+			var imprimeIMC = function(){
+				var caixinhaAltura = document.getElementById("campoAltura");
+				var caixinhaPeso = document.getElementById("campoPeso");
+				
+				var alturaPessoa = caixinhaAltura.value;
+				var pesoPessoa = caixinhaPeso.value;
 
-			var imcPessoa = calculaIMC(pesoPessoa, alturaPessoa);
-			alert(imcPessoa); 
-		}
+				var imcPessoa = calculaIMC(pesoPessoa, alturaPessoa);
+				alert(imcPessoa); 
+			}
 
-		var botao = document.getElementById("botao");
-		botao.onclick = imprimeIMC;	
-	</script>
-</form>
+			var botao = document.getElementById("botao");
+			botao.onclick = imprimeIMC;	
+		</script>
+	</form>
 </html>
