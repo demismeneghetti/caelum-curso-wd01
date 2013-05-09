@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<html>
+	<script>
+		var numero = 15;
+
+		var primeira = function(a){
+			console.log("primeira: antes " + a);
+			segunda(a);
+			console.log("primeira: depois " + a);			
+		};
+
+		var segunda = function(b){
+			console.log("segunda: antes " + b);
+			terceira(b);
+			console.log("segunda: depois " + b);
+		}
+
+		var terceira = function(c){
+			console.log("terceira: Uffa!!! - " + c);
+		}
+
+		console.log("Comeco");
+		primeira(numero);
+		console.log("Fim");
+
+	</script>
+</html>

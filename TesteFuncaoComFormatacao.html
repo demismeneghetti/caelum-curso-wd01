@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<html>
+	<script>
+		var colocaNegrito = function (texto){
+			var textoComNegrito = "<b>" + texto + "</b>";
+			return textoComNegrito;
+		}
+		
+		var colocaItalico = function (texto){
+			var textoComItalico = "<i>" + texto + "</i>";
+			return textoComItalico;
+		}
+
+		var comItalico = colocaItalico("Delicia");
+		var comNegritoEItalico = colocaNegrito(comItalico);
+
+		document.write(comNegritoEItalico);
+
+	</script>
+</html>
