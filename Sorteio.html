@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<html>
+	<script>
+		var mostra = function(frase){
+		    document.write(frase);
+		}
+
+		var pulaLinha = function(){
+		    document.write("<br>");
+		}
+		
+		function sorteia(){
+			var entre0e1 = Math.random();
+			var entre0e10 = entre0e1 * 10;
+			return entre0e10;
+		}
+
+		var numeroSorteado = sorteia();
+		
+		var tentativas = 1;
+		while(chute != numeroSorteado){
+			var chute = parseInt(prompt("Chute nº de 1 a 10:"));
+			if(chute == numeroSorteado){
+				mostra("Ganhou!");
+				pulaLinha();
+				break;
+			} else {
+				mostra("Errou: " + tentativas);
+				pulaLinha();
+			}
+			tentativas++;
+		}
+		mostra("Fim de Jogo!!!");
+
+	</script>
+</html>
