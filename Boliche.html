@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<html>
+
+	<script>
+		 
+		var mostra = function(frase){
+		    document.write(frase);
+		}
+
+		function incluiImput(numero){
+			document.write("Nome " + numero);
+			document.write("<input type = 'text' id='jogador"+ numero +"'/> ");
+			document.write("<br>");
+		}
+
+		var quant = parseInt(prompt("Quantos vão jogar?"));
+
+		document.write("<form>");
+		for (var jogador = 1; jogador <= quant; jogador++){
+			incluiImput(jogador);
+		};
+		document.write("<input type='button' value='OK' id='botao' />");
+		document.write("</form>");
+
+		function carregaNomes(){
+			var nomes = [];
+			for (var i = 1; i <= quant; i++) {
+				var nome = document.getElementById("jogador" + i);
+				nomes.push(nome.value);
+			}
+			alert(nomes);
+		}
+
+		var botaoOK = document.getElementById("botao");
+		botaoOK.onclick = carregaNomes;
+
+
+	</script>
+</html>
+
+
+
